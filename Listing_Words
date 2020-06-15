@@ -1,0 +1,16 @@
+fhand = open("romeo.txt", 'r')
+
+word_list = list()
+
+for line in fhand:
+    words = line.split()
+
+    for word in words:
+        if word in word_list:
+            continue
+        else:
+            word_list.append(word)
+
+word_list.sort()
+
+print (word_list)
