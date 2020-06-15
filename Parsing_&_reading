@@ -1,0 +1,18 @@
+fhand = open("mbox-short.txt", "r")
+count = 0
+
+for line in fhand:
+    line = line.rstrip()
+    wds = line.split()
+    if len(wds) < 3 or wds[0] != "From":
+        continue
+    else:
+        print(wds[1])
+for line in fhand:
+    line = line.rstrip()
+    wds = line.split()
+    if len(wds) < 1:
+        continue
+    elif wds[0] == "From":
+        count = count + 1
+print("There were", count, "lines in the file with From as the first word")
