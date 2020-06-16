@@ -1,0 +1,22 @@
+name = input("Enter file:")
+di = dict()
+
+if len(name) < 1 : name = "mbox-short.txt"
+handle = open(name)
+for line in handle :
+    line = line.rstrip()
+    line1 = line.split()
+    if len(line1) < 1 or line1[0] != "From":
+        continue
+    else:
+        if len(line1) > 1 and line1[0] == "From":
+            di[line1[1]] = di.get(line1[1], 0) + 1
+
+largest = 0
+theword = None
+for k, v in di.items():
+    if v > largest:
+        largest = v
+        theword = k #remeber the key that was largest
+
+print(theword, largest)
