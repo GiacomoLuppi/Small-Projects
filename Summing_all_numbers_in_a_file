@@ -1,0 +1,17 @@
+import re
+
+total = 0
+linesum = []
+
+handle = open("regex.txt")
+
+for line in handle:
+    file = line.rstrip()
+    stuff = re.findall("[0-9]+", file)
+
+    for i in stuff:
+        i = int(i)
+        linesum.append(i)
+
+print("The sum of every number in the file is:", sum(linesum))
+
