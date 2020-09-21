@@ -1,2 +1,2 @@
-# Small-Projects
+# Coursera Projects
 First Programs
