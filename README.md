@@ -1,2 +1,2 @@
 # Coursera Projects
-First Programs
+First Programs from the Python for Everybody Specialization on Coursera
